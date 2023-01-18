@@ -1,0 +1,163 @@
+body{
+  font-family: 'Teko', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #872020;
+}
+h6{
+  display:inline-block;
+  position: relative;
+  right : 27px;
+  top: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.box{
+position: relative;
+height: 23.78em;
+width: 26.25em;
+background: #7F167F ;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: -9px -10px 10px red,9px 10px 11px rgb(0, 0, 0),19px 15px 15px red,-11px -15px 8px black;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 23.78em;
+    height: 26.25em;
+    background: linear-gradient(0deg,transparent,
+    #DC0000, #DC0000);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 23.78em;
+    height: 26.25em;
+    background: linear-gradient(0deg,transparent,
+    #ff0000, #ff0000);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate
+{
+  0%{
+    transform: rotate(0deg);
+  }  
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.form{
+    position: absolute;
+    inset: 5px;
+    border-radius: 8px;
+    background: #460C68;
+    z-index: 10;
+    padding: 3.125em 2.5em ;
+    display: flex;
+    flex-direction: column;
+    
+}
+.form h3{
+  color: #45f3ff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.inputclass{
+  position: relative;
+  width: 18.75em;
+  margin-top: 2.1875em;
+}
+.inputclass input
+{
+  position : relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color:#3C2A21 ;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+.inputclass span{
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  font-size: 1em;
+  color: rgb(0, 119, 255);
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  }
+  .inputclass input:valid~span,
+  .inputclass input:focus~span
+  {
+     color: rgb(255, 0, 0);
+     transform: translateX(0px) translateY(-34px);
+     font-size: 0.75em;
+  }
+  .inputclass i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: index 9;
+  }
+  .inputclass input:valid~i,
+  .inputclass input:focus~i
+  {
+     height: 44px;
+  }
+  .buttonClass {
+    font-size:15px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#fff;
+    border-color:#599bb3;
+    font-weight:bold;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
+    box-shadow: 0px 10px 14px -7px #276873;
+    text-shadow: 0px 1px 0px #3d768a;
+    background:linear-gradient(#599bb3, #408c99);
+  }
+  .buttonClass:hover {
+    background: linear-gradient(#408c99, #599bb3);
+  }
+  .links{
+    display: flex;
+    justify-content: space-between;
+    word-spacing: 2%;
+  }
+  .link a{
+    margin:10px 0 ;
+    font-size: 0.75em;
+    color:#7F167F;
+    text-decoration: none;
+
+  }
+  .link a:hover,
+  .link a:nth-child(2){
+    color: #ff0000;
+  }
